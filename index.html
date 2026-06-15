@@ -1219,8 +1219,8 @@
     
     btnSubmit.disabled = true;
     btnSubmit.textContent = 'সাবমিট হচ্ছে...';
-    
-    if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbyRqJ9GKLxub99gFuJG84dNi7Zr2GZ0MZUoV6KT929eVsWpWzU_oI9BQswCZe57ayGU/exec') {
+   
+    if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL.trim() !== 'https://script.google.com/macros/s/AKfycbyRqJ9GKLxub99gFuJG84dNi7Zr2GZ0MZUoV6KT929eVsWpWzU_oI9BQswCZe57ayGU/exec') {
       fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
