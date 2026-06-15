@@ -1,7 +1,7 @@
 // Google Apps Script কোড - পুরোপুরি নতুন করে দিন
 function doPost(e) {
   try {
-    const sheetId = 'https://script.google.com/macros/s/AKfycbzWG8qZEWo__5E4tkv7FScRGNaf9KPP8UZNx5JrrUOXHO-CheJPCOGHoRKhA1tNoSIs/exec'; // 👈 আপনার Sheet এর আইডি দিন
+    const sheetId = 'https://script.google.com/macros/s/AKfycbzvAinnzNmBpzsWdGeosKYx-eHOhoJzo5dU2oV8q0moThgRV87CZrYV5kmYjhhI_519/exec'; // 👈 আপনার Sheet এর আইডি দিন
     const data = JSON.parse(e.postData.contents);
     
     // আজকের তারিখ
