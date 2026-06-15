@@ -9,26 +9,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
+  /* আপনার দেওয়া সমস্ত CSS অপরিবর্তিত থাকবে */
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-
   body {
     font-family: 'Hind Siliguri', sans-serif;
     background-color: #f8fafc;
     color: #1e293b;
     line-height: 1.5;
   }
-
   .container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 24px;
   }
-
-  /* NAV */
   .nav {
     position: fixed;
     top: 0;
@@ -39,7 +36,6 @@
     border-bottom: 1px solid #e2e8f0;
     padding: 16px 0;
   }
-
   .nav-inner {
     max-width: 1280px;
     margin: 0 auto;
@@ -48,13 +44,11 @@
     justify-content: space-between;
     align-items: center;
   }
-
   .nav-logo {
     display: flex;
     align-items: center;
     gap: 12px;
   }
-
   .logo-icon {
     width: 48px;
     height: 48px;
@@ -67,18 +61,15 @@
     color: white;
     font-weight: bold;
   }
-
   .logo-title {
     font-size: 20px;
     font-weight: 700;
     color: #0f172a;
   }
-
   .logo-sub {
     font-size: 12px;
     color: #64748b;
   }
-
   .nav-cta {
     background: linear-gradient(135deg, #059669, #10b981);
     color: white;
@@ -88,20 +79,16 @@
     font-weight: 600;
     transition: all 0.3s;
   }
-
   .nav-cta:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(5, 150, 105, 0.3);
   }
-
-  /* HERO */
   .hero {
     position: relative;
     padding: 120px 0 80px;
     background: linear-gradient(135deg, #064e3b 0%, #059669 100%);
     overflow: hidden;
   }
-
   .hero-bg {
     position: absolute;
     top: 0;
@@ -112,12 +99,10 @@
     background-repeat: repeat;
     opacity: 0.6;
   }
-
   .hero-content {
     position: relative;
     text-align: center;
   }
-
   .hero-badge {
     display: inline-block;
     background: rgba(255, 255, 255, 0.15);
@@ -129,7 +114,6 @@
     margin-bottom: 24px;
     backdrop-filter: blur(4px);
   }
-
   .hero-title {
     font-size: 48px;
     font-weight: 800;
@@ -137,27 +121,23 @@
     margin-bottom: 20px;
     color: white;
   }
-
   @media (min-width: 768px) {
     .hero-title {
       font-size: 64px;
     }
   }
-
   .highlight {
     background: linear-gradient(135deg, #6ee7b7, #34d399);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
   }
-
   .hero-desc {
     font-size: 18px;
     color: #d1fae5;
     max-width: 600px;
     margin: 0 auto 32px;
   }
-
   .hero-stats {
     display: flex;
     justify-content: center;
@@ -165,29 +145,24 @@
     margin-bottom: 32px;
     flex-wrap: wrap;
   }
-
   .stat {
     text-align: center;
   }
-
   .stat-num {
     font-size: 28px;
     font-weight: 800;
     color: #6ee7b7;
     display: block;
   }
-
   .stat-label {
     font-size: 14px;
     color: #d1fae5;
   }
-
   .stat-divider {
     width: 1px;
     height: 40px;
     background: rgba(255, 255, 255, 0.2);
   }
-
   .btn-hero {
     display: inline-flex;
     align-items: center;
@@ -201,31 +176,25 @@
     transition: all 0.3s;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
-
   .btn-hero:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   }
-
   .hero-wave {
     position: absolute;
     bottom: -2px;
     left: 0;
     width: 100%;
   }
-
-  /* WHY SECTION */
   .why-section {
     padding: 80px 0;
     background: white;
   }
-
   .why-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 32px;
   }
-
   .why-card {
     text-align: center;
     padding: 32px 20px;
@@ -234,40 +203,32 @@
     transition: all 0.3s;
     border: 1px solid #e2e8f0;
   }
-
   .why-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.08);
     border-color: #059669;
   }
-
   .why-icon {
     font-size: 48px;
     margin-bottom: 16px;
   }
-
   .why-card h3 {
     margin-bottom: 12px;
     font-size: 20px;
     color: #0f172a;
   }
-
   .why-card p {
     color: #64748b;
     font-size: 14px;
   }
-
-  /* COURSES SECTION */
   .courses-section {
     padding: 80px 0;
     background: #f8fafc;
   }
-
   .section-header {
     text-align: center;
     margin-bottom: 48px;
   }
-
   .section-label {
     color: #059669;
     font-weight: 600;
@@ -276,26 +237,22 @@
     margin-bottom: 12px;
     font-size: 14px;
   }
-
   .section-title {
     font-size: 36px;
     font-weight: 800;
     margin-bottom: 16px;
     color: #0f172a;
   }
-
   .section-desc {
     color: #64748b;
     max-width: 600px;
     margin: 0 auto;
   }
-
   .courses-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 32px;
   }
-
   .course-card {
     background: white;
     border-radius: 24px;
@@ -305,13 +262,11 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     border: 1px solid #e2e8f0;
   }
-
   .course-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.15);
     border-color: #059669;
   }
-
   .course-image {
     background: linear-gradient(135deg, #059669, #10b981);
     height: 140px;
@@ -321,32 +276,27 @@
     font-size: 56px;
     color: white;
   }
-
   .course-content {
     padding: 24px;
   }
-
   .course-title {
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 12px;
     color: #0f172a;
   }
-
   .course-desc {
     color: #64748b;
     margin-bottom: 16px;
     line-height: 1.6;
     font-size: 14px;
   }
-
   .course-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 16px;
   }
-
   .course-tag {
     background: #d1fae5;
     color: #059669;
@@ -355,7 +305,6 @@
     padding: 4px 12px;
     border-radius: 50px;
   }
-
   .course-meta {
     display: flex;
     justify-content: space-between;
@@ -364,30 +313,24 @@
     padding-top: 16px;
     margin-top: 8px;
   }
-
   .course-price {
     color: #059669;
     font-weight: 700;
     font-size: 22px;
   }
-
   .course-duration {
     font-size: 13px;
     color: #64748b;
   }
-
-  /* TESTIMONIALS */
   .testimonials-section {
     padding: 80px 0;
     background: white;
   }
-
   .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
   }
-
   .tcard {
     background: #f8fafc;
     padding: 28px;
@@ -395,32 +338,27 @@
     border: 1px solid #e2e8f0;
     transition: all 0.3s;
   }
-
   .tcard:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
   }
-
   .tcard-stars {
     color: #f59e0b;
     margin-bottom: 16px;
     font-size: 16px;
     letter-spacing: 2px;
   }
-
   .tcard p {
     margin-bottom: 20px;
     color: #475569;
     line-height: 1.6;
     font-style: italic;
   }
-
   .tcard-author {
     display: flex;
     align-items: center;
     gap: 12px;
   }
-
   .tcard-avatar {
     width: 48px;
     height: 48px;
@@ -433,24 +371,19 @@
     font-weight: 700;
     font-size: 18px;
   }
-
   .tcard-author b {
     display: block;
     font-size: 14px;
     color: #0f172a;
   }
-
   .tcard-author span {
     font-size: 12px;
     color: #64748b;
   }
-
-  /* CONTACT */
   .contact-section {
     padding: 80px 0;
     background: linear-gradient(135deg, #064e3b, #059669);
   }
-
   .contact-box {
     background: white;
     border-radius: 32px;
@@ -459,35 +392,29 @@
     overflow: hidden;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
-
   .contact-info {
     padding: 48px;
     background: #0f172a;
     color: white;
   }
-
   .contact-info h2 {
     font-size: 32px;
     margin-bottom: 16px;
   }
-
   .contact-info p {
     color: #94a3b8;
     margin-bottom: 32px;
   }
-
   .contact-items {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
-
   .contact-item {
     display: flex;
     align-items: center;
     gap: 12px;
   }
-
   .contact-form-box {
     padding: 48px;
     background: white;
@@ -497,7 +424,6 @@
     align-items: center;
     text-align: center;
   }
-
   .btn-contact {
     background: linear-gradient(135deg, #059669, #10b981);
     color: white;
@@ -508,19 +434,15 @@
     transition: all 0.3s;
     display: inline-block;
   }
-
   .btn-contact:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(5, 150, 105, 0.3);
   }
-
-  /* FOOTER */
   .footer {
     background: #0f172a;
     padding: 48px 0;
     text-align: center;
   }
-
   .footer-logo {
     display: flex;
     align-items: center;
@@ -528,13 +450,10 @@
     gap: 12px;
     margin-bottom: 24px;
   }
-
   .footer-copy {
     color: #64748b;
     font-size: 14px;
   }
-
-  /* MODAL */
   .modal-overlay {
     position: fixed;
     top: 0;
@@ -551,12 +470,10 @@
     visibility: hidden;
     transition: all 0.3s ease;
   }
-
   .modal-overlay.active {
     opacity: 1;
     visibility: visible;
   }
-
   .modal-box {
     background: white;
     width: 90%;
@@ -568,11 +485,9 @@
     transform: scale(0.95);
     transition: transform 0.3s cubic-bezier(0.34, 1.2, 0.64, 1);
   }
-
   .modal-overlay.active .modal-box {
     transform: scale(1);
   }
-
   .modal-close {
     position: sticky;
     top: 16px;
@@ -589,19 +504,16 @@
     z-index: 10;
     margin: 16px;
   }
-
   .modal-close:hover {
     background: #e2e8f0;
     transform: rotate(90deg);
   }
-
   .modal-header {
     display: flex;
     gap: 16px;
     padding: 24px 32px 16px;
     background: linear-gradient(135deg, #d1fae5, #a7f3d0);
   }
-
   .modal-icon {
     width: 60px;
     height: 60px;
@@ -612,57 +524,47 @@
     justify-content: center;
     font-size: 32px;
   }
-
   .modal-header h2 {
     font-size: 24px;
     margin-bottom: 6px;
     color: #0f172a;
   }
-
   .modal-header p {
     color: #475569;
     font-size: 14px;
   }
-
   .modal-body {
     padding: 24px 32px 32px;
   }
-
   .modal-detail {
     background: #f8fafc;
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 24px;
   }
-
   .detail-item {
     margin-bottom: 12px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-
   .detail-label {
     font-weight: 600;
     color: #475569;
   }
-
   .detail-value {
     color: #059669;
     font-weight: 600;
   }
-
   .duration-section {
     margin-bottom: 24px;
   }
-
   .duration-section label {
     font-weight: 600;
     display: block;
     margin-bottom: 8px;
     color: #1e293b;
   }
-
   .duration-select {
     width: 100%;
     padding: 12px 16px;
@@ -673,30 +575,25 @@
     transition: all 0.2s;
     cursor: pointer;
   }
-
   .duration-select:focus {
     outline: none;
     border-color: #059669;
     box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
   }
-
   .form-heading {
     font-size: 20px;
     margin-bottom: 20px;
     color: #0f172a;
     font-weight: 700;
   }
-
   .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
-
   .fg {
     margin-bottom: 16px;
   }
-
   .fg label {
     display: block;
     margin-bottom: 6px;
@@ -704,11 +601,9 @@
     font-size: 14px;
     color: #1e293b;
   }
-
   .req {
     color: #ef4444;
   }
-
   .fg input,
   .fg textarea {
     width: 100%;
@@ -719,31 +614,26 @@
     font-family: inherit;
     transition: all 0.2s;
   }
-
   .fg input:focus,
   .fg textarea:focus {
     outline: none;
     border-color: #059669;
     box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
   }
-
   .fg input.error,
   .duration-select.error {
     border-color: #ef4444;
     animation: shake 0.3s ease;
   }
-
   @keyframes shake {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
     75% { transform: translateX(5px); }
   }
-
   .fg textarea {
     resize: vertical;
     min-height: 80px;
   }
-
   .btn-submit {
     width: 100%;
     background: linear-gradient(135deg, #059669, #10b981);
@@ -757,35 +647,29 @@
     transition: all 0.2s;
     margin-top: 8px;
   }
-
   .btn-submit:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(5, 150, 105, 0.3);
   }
-
   .form-note {
     text-align: center;
     font-size: 12px;
     color: #94a3b8;
     margin-top: 16px;
   }
-
   .modal-success {
     text-align: center;
     padding: 40px 20px;
     display: none;
   }
-
   .modal-success.active {
     display: block;
     animation: successFade 0.4s ease;
   }
-
   @keyframes successFade {
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
   }
-
   .success-circle {
     width: 80px;
     height: 80px;
@@ -799,25 +683,21 @@
     margin: 0 auto 24px;
     animation: checkPop 0.4s cubic-bezier(0.34, 1.2, 0.64, 1);
   }
-
   @keyframes checkPop {
     0% { transform: scale(0); }
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
   }
-
   .modal-success h3 {
     font-size: 24px;
     margin-bottom: 12px;
     color: #0f172a;
   }
-
   .modal-success p {
     color: #64748b;
     margin-bottom: 24px;
     line-height: 1.6;
   }
-
   .btn-close-success {
     background: #0f172a;
     color: white;
@@ -828,12 +708,9 @@
     cursor: pointer;
     transition: all 0.2s;
   }
-
   .btn-close-success:hover {
     background: #1e293b;
   }
-
-  /* TOAST */
   .toast-message {
     position: fixed;
     bottom: 30px;
@@ -848,19 +725,15 @@
     transition: transform 0.3s cubic-bezier(0.34, 1.2, 0.64, 1);
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
   }
-
   .toast-message.show {
     transform: translateX(0);
   }
-
   .toast-message.error {
     background: #ef4444;
   }
-
   .toast-message.success {
     background: #059669;
   }
-
   @media (max-width: 768px) {
     .form-grid {
       grid-template-columns: 1fr;
@@ -879,7 +752,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
     <div class="nav-logo">
@@ -893,7 +765,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="container hero-content">
@@ -914,7 +785,6 @@
   </div>
 </section>
 
-<!-- WHY US -->
 <section class="why-section">
   <div class="container">
     <div class="why-grid">
@@ -926,7 +796,6 @@
   </div>
 </section>
 
-<!-- COURSES -->
 <section class="courses-section" id="courses">
   <div class="container">
     <div class="section-header">
@@ -938,7 +807,6 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section class="testimonials-section">
   <div class="container">
     <div class="section-header">
@@ -953,7 +821,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact-section">
   <div class="container">
     <div class="contact-box">
@@ -975,7 +842,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-logo"><div class="logo-icon" style="background:rgba(255,255,255,0.15)">✚</div><div><div class="logo-title" style="color:#fff">Prime Professional Technical Institute</div><div class="logo-sub" style="color:#94a3b8">Palli Chikitsa Academy</div></div></div>
@@ -983,7 +849,6 @@
   </div>
 </footer>
 
-<!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal-box">
     <button class="modal-close" id="modalClose">✕</button>
@@ -1018,12 +883,11 @@
 
 <script>
   // =====================================================
-  // 👇 গুরুত্বপূর্ণ: এখানে আপনার Google Apps Script URL বসান
+  // 👇 এই URL টি replace করবেন আপনার Google Apps Script URL দিয়ে
   // =====================================================
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwTMMQ_eWtTkWljj8o41kMURxGtZ2NzD3ytYaV-mNIdiN6jVFFB3vpziXiSKVSj9H6g/exec';
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxopSDab2E-S9MYm_UHFx6xPMjg4kV6Yas82S3Yk6Ip2xN_Ewyh0eiXOGhQUJF9tZUa/exec';
   // =====================================================
 
-  // কোর্সের ডেটা
   let coursesData = [
     {
       id: 1,
@@ -1051,7 +915,6 @@
     }
   ];
 
-  // DOM Elements
   const coursesGrid = document.getElementById('coursesGrid');
   const modalOverlay = document.getElementById('modalOverlay');
   const modalClose = document.getElementById('modalClose');
@@ -1196,10 +1059,7 @@
     return isValid;
   }
 
-  // =====================================================
-  // আপডেটেড submitApplication ফাংশন - Google Sheet এ ডাটা পাঠাবে
-  // =====================================================
-  function submitApplication() {
+  async function submitApplication() {
     if (!validateForm()) return;
     
     const name = document.getElementById('fName').value.trim();
@@ -1208,77 +1068,49 @@
     const question = document.getElementById('fMsg').value.trim();
     const selectedDuration = currentCourse.durations.find(d => d.value === durationSelect.value);
     
-    // ডাটা তৈরি করুন
     const postData = {
       name: name,
       phone: phone,
       address: address,
       courseTitle: currentCourse.title,
       coursePrice: selectedDuration.price,
-      message: question
+      courseDuration: selectedDuration.label,
+      message: question,
+      timestamp: new Date().toISOString()
     };
     
-    // বাটন ডিজেবল করুন
     btnSubmit.disabled = true;
     btnSubmit.textContent = 'সাবমিট হচ্ছে...';
     
-    // Google Sheet-এ ডাটা পাঠান (যদি URL দেওয়া থাকে)
-    if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbwTMMQ_eWtTkWljj8o41kMURxGtZ2NzD3ytYaV-mNIdiN6jVFFB3vpziXiSKVSj9H6g/exec') {
-      fetch(GOOGLE_SCRIPT_URL, {
+    try {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(postData)
-      })
-      .then(() => {
-        // সাকসেস মেসেজ
-        successDetails.innerHTML = `
-          ✅ আপনার আবেদন সফল হয়েছে!<br/><br/>
-          📛 নাম: ${name}<br/>
-          📞 ফোন: ${phone}<br/>
-          📍 ঠিকানা: ${address}<br/>
-          📚 কোর্স: ${currentCourse.title}<br/>
-          💰 দাম: ${selectedDuration.price}<br/>
-          ${question ? `❓ প্রশ্ন: ${question}<br/>` : ''}<br/>
-          <span style="color: #059669;">আমাদের টিম শীঘ্রই যোগাযোগ করবে। ধন্যবাদ!</span>
-        `;
-        
-        modalFormWrap.style.display = 'none';
-        modalSuccess.classList.add('active');
-        showToast('আবেদন জমা হয়েছে!', 'success');
-        
-        console.log('ডাটা পাঠানো হয়েছে:', postData);
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        showToast('সাবমিট করতে সমস্যা হয়েছে। আবার চেষ্টা করুন।', 'error');
-      })
-      .finally(() => {
-        btnSubmit.disabled = false;
-        btnSubmit.textContent = 'আবেদন জমা দিন →';
       });
-    } else {
-      // URL না দেওয়া থাকলে লোকালি সেভ করুন (টেস্টিং এর জন্য)
+      
       successDetails.innerHTML = `
+        ✅ আপনার আবেদন সফল হয়েছে!<br/><br/>
         📛 নাম: ${name}<br/>
         📞 ফোন: ${phone}<br/>
-        📍 সম্পূর্ণ ঠিকানা: ${address}<br/>
+        📍 ঠিকানা: ${address}<br/>
         📚 কোর্স: ${currentCourse.title}<br/>
         ⏱️ মেয়াদ: ${selectedDuration.label}<br/>
-        💰 ফি: ${selectedDuration.price}<br/>
-        ${question ? `❓ প্রশ্ন: ${question}` : ''}<br/><br/>
-        <span style="color: #f59e0b;">⚠️ Google Script URL সেট করা হয়নি। ডাটা লোকালি সেভ হয়েছে।</span><br/>
-        আমাদের টিম শীঘ্রই আপনার সাথে যোগাযোগ করবে। ধন্যবাদ!
+        💰 দাম: ${selectedDuration.price}<br/>
+        ${question ? `❓ প্রশ্ন: ${question}<br/>` : ''}<br/>
+        <span style="color: #059669;">আমাদের টিম শীঘ্রই যোগাযোগ করবে। ধন্যবাদ!</span>
       `;
-      
-      console.log('লোকাল ডাটা (URL নেই):', { course: currentCourse.title, duration: selectedDuration.label, name, phone, address, question });
       
       modalFormWrap.style.display = 'none';
       modalSuccess.classList.add('active');
-      showToast('আবেদন জমা হয়েছে! (লোকাল)', 'success');
+      showToast('আবেদন জমা হয়েছে!', 'success');
       
+      console.log('ডাটা পাঠানো হয়েছে:', postData);
+    } catch (error) {
+      console.error('Error:', error);
+      showToast('সাবমিট করতে সমস্যা হয়েছে। আবার চেষ্টা করুন।', 'error');
+    } finally {
       btnSubmit.disabled = false;
       btnSubmit.textContent = 'আবেদন জমা দিন →';
     }
