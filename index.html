@@ -1223,7 +1223,7 @@
     btnSubmit.textContent = 'সাবমিট হচ্ছে...';
     
     // Google Sheet-এ ডাটা পাঠান (যদি URL দেওয়া থাকে)
-    if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'YOUR_DEPLOYMENT_ID_HERE') {
+    if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbzvAinnzNmBpzsWdGeosKYx-eHOhoJzo5dU2oV8q0moThgRV87CZrYV5kmYjhhI_519/exec') {
       fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
