@@ -963,7 +963,7 @@
         <p>যেকোনো প্রশ্ন বা পরামর্শের জন্য আমরা সর্বদা প্রস্তুত।</p>
         <div class="contact-items">
           <div class="contact-item"><span>📞</span><span> 01869-725244</span></div>
-          <div class="contact-item"><span>✉️</span><span>error</span></div>
+          <div class="contact-item"><span>✉️</span><span>info@primeinstitute.com</span></div>
           <div class="contact-item"><span>📍</span><span>চান্দনা চৌরাস্তা, গাজীপুর</span></div>
         </div>
       </div>
@@ -979,7 +979,7 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-logo"><div class="logo-icon" style="background:rgba(255,255,255,0.15)">✚</div><div><div class="logo-title" style="color:#fff">Prime Professional Technical Institute</div><div class="logo-sub" style="color:#94a3b8">Palli Chikitsa Academy</div></div></div>
-    <p class="footer-copy">© 2025 Prime Professional Technical Institute। Offical</p>
+    <p class="footer-copy">© 2025 Prime Professional Technical Institute। Official</p>
   </div>
 </footer>
 
@@ -999,7 +999,7 @@
           <div class="fg"><label>পূর্ণ নাম <span class="req">*</span></label><input type="text" id="fName" placeholder="আপনার সম্পূর্ণ নাম"/></div>
           <div class="fg"><label>ফোন নম্বর <span class="req">*</span></label><input type="tel" id="fPhone" placeholder="01XXXXXXXXX"/></div>
         </div>
-        <div class="fg"><label>আপনার সম্পূর্ণ ঠিকানা <span class="req">*</span></label><input type="text" id="fAddress" placeholderজেলা, থানা, গ্রাম/রাস্তা সহ সম্পূর্ণ ঠিকানা"/></div>
+        <div class="fg"><label>আপনার সম্পূর্ণ ঠিকানা <span class="req">*</span></label><input type="text" id="fAddress" placeholder="জেলা, থানা, গ্রাম/রাস্তা সহ সম্পূর্ণ ঠিকানা"/></div>
         <div class="fg"><label>কোনো প্রশ্ন?</label><textarea id="fMsg" placeholder="ঐচ্ছিক..."></textarea></div>
         <button class="btn-submit" id="btnSubmit">আবেদন জমা দিন →</button>
         <p class="form-note">🔒 আপনার তথ্য সম্পূর্ণ নিরাপদ ও গোপনীয়।</p>
@@ -1017,7 +1017,13 @@
 <div id="toastMessage" class="toast-message"></div>
 
 <script>
-  // কোর্সের ডেটা (সহজেই এডিট/ডিলিট করতে পারবেন)
+  // =====================================================
+  // 👇 গুরুত্বপূর্ণ: এখানে আপনার Google Apps Script URL বসান
+  // =====================================================
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx65ziAtOlG8Tp5GRzpMt5Yw6Hhyy8pdkCv9BAqDCg/dev';
+  // =====================================================
+
+  // কোর্সের ডেটা
   let coursesData = [
     {
       id: 1,
@@ -1027,12 +1033,10 @@
       icon: "🩺",
       tags: ["প্রাথমিক চিকিৎসা", "জরুরি সেবা", "লাইফ সেভিং"],
       durations: [
-       
         { value: "6_months", label: "6 মাস", price: "৳ 15,500", seats: "200 জন" }
       ],
       defaultDuration: "6_months"
     },
-    
     {
       id: 3,
       title: "ভেটেরিনারি পশু চিকিৎসা কোর্স",
@@ -1041,9 +1045,7 @@
       icon: "🐄",
       tags: ["পশুপালন কোর্স", "আধুনিক প্রশিক্ষণ", "খামার ব্যবস্থাপনা"],
       durations: [
-        
         { value: "6_months", label: "6 মাস", price: "৳ 18,500", seats: "200 জন" }
-       
       ],
       defaultDuration: "6_months"
     }
@@ -1194,6 +1196,9 @@
     return isValid;
   }
 
+  // =====================================================
+  // আপডেটেড submitApplication ফাংশন - Google Sheet এ ডাটা পাঠাবে
+  // =====================================================
   function submitApplication() {
     if (!validateForm()) return;
     
@@ -1203,22 +1208,80 @@
     const question = document.getElementById('fMsg').value.trim();
     const selectedDuration = currentCourse.durations.find(d => d.value === durationSelect.value);
     
-    successDetails.innerHTML = `
-      📛 নাম: ${name}<br/>
-      📞 ফোন: ${phone}<br/>
-      📍 সম্পূর্ণ ঠিকানা: ${address}<br/>
-      📚 কোর্স: ${currentCourse.title}<br/>
-      ⏱️ মেয়াদ: ${selectedDuration.label}<br/>
-      💰 ফি: ${selectedDuration.price}<br/>
-      ${question ? `❓ প্রশ্ন: ${question}` : ''}<br/><br/>
-      আমাদের টিম শীঘ্রই আপনার সাথে যোগাযোগ করবে। ধন্যবাদ!
-    `;
+    // ডাটা তৈরি করুন
+    const postData = {
+      name: name,
+      phone: phone,
+      address: address,
+      courseTitle: currentCourse.title,
+      coursePrice: selectedDuration.price,
+      message: question
+    };
     
-    console.log({ course: currentCourse.title, duration: selectedDuration.label, name, phone, address, question });
+    // বাটন ডিজেবল করুন
+    btnSubmit.disabled = true;
+    btnSubmit.textContent = 'সাবমিট হচ্ছে...';
     
-    modalFormWrap.style.display = 'none';
-    modalSuccess.classList.add('active');
-    showToast('আপনার আবেদন সফল হয়েছে!', 'success');
+    // Google Sheet-এ ডাটা পাঠান (যদি URL দেওয়া থাকে)
+    if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'YOUR_DEPLOYMENT_ID_HERE') {
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(postData)
+      })
+      .then(() => {
+        // সাকসেস মেসেজ
+        successDetails.innerHTML = `
+          ✅ আপনার আবেদন সফল হয়েছে!<br/><br/>
+          📛 নাম: ${name}<br/>
+          📞 ফোন: ${phone}<br/>
+          📍 ঠিকানা: ${address}<br/>
+          📚 কোর্স: ${currentCourse.title}<br/>
+          💰 দাম: ${selectedDuration.price}<br/>
+          ${question ? `❓ প্রশ্ন: ${question}<br/>` : ''}<br/>
+          <span style="color: #059669;">আমাদের টিম শীঘ্রই যোগাযোগ করবে। ধন্যবাদ!</span>
+        `;
+        
+        modalFormWrap.style.display = 'none';
+        modalSuccess.classList.add('active');
+        showToast('আবেদন জমা হয়েছে!', 'success');
+        
+        console.log('ডাটা পাঠানো হয়েছে:', postData);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        showToast('সাবমিট করতে সমস্যা হয়েছে। আবার চেষ্টা করুন।', 'error');
+      })
+      .finally(() => {
+        btnSubmit.disabled = false;
+        btnSubmit.textContent = 'আবেদন জমা দিন →';
+      });
+    } else {
+      // URL না দেওয়া থাকলে লোকালি সেভ করুন (টেস্টিং এর জন্য)
+      successDetails.innerHTML = `
+        📛 নাম: ${name}<br/>
+        📞 ফোন: ${phone}<br/>
+        📍 সম্পূর্ণ ঠিকানা: ${address}<br/>
+        📚 কোর্স: ${currentCourse.title}<br/>
+        ⏱️ মেয়াদ: ${selectedDuration.label}<br/>
+        💰 ফি: ${selectedDuration.price}<br/>
+        ${question ? `❓ প্রশ্ন: ${question}` : ''}<br/><br/>
+        <span style="color: #f59e0b;">⚠️ Google Script URL সেট করা হয়নি। ডাটা লোকালি সেভ হয়েছে।</span><br/>
+        আমাদের টিম শীঘ্রই আপনার সাথে যোগাযোগ করবে। ধন্যবাদ!
+      `;
+      
+      console.log('লোকাল ডাটা (URL নেই):', { course: currentCourse.title, duration: selectedDuration.label, name, phone, address, question });
+      
+      modalFormWrap.style.display = 'none';
+      modalSuccess.classList.add('active');
+      showToast('আবেদন জমা হয়েছে! (লোকাল)', 'success');
+      
+      btnSubmit.disabled = false;
+      btnSubmit.textContent = 'আবেদন জমা দিন →';
+    }
   }
 
   modalClose.addEventListener('click', closeModal);
